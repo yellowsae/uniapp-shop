@@ -1,10 +1,14 @@
 import Vue from 'vue'
 import App from './App'
+import uView from 'uview-ui'
 
 Vue.config.productionTip = false
-
+Vue.use(uView)
+// 如此配置即可
+uni.$u.config.unit = 'rpx'
 App.mpType = 'app'
-
+// 通过`console.log`打印的形式
+console.log(uni.$u.config.v);
 function isPromise(obj) {
   return (
     !!obj &&
